@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web Remote</title>
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="card">
+        <h2>Web Remote</h2>
+
+        <label for="base">Base URL</label>
+        <input id="base" placeholder="http://192.168.1.100:8080">
+
+        <div id="status">⚪ Not Connected</div>
+    </header>
+
+    <section class="card">
+
+        <div class="dpad">
+
+            <div></div>
+            <button data-p="/up">▲</button>
+            <div></div>
+
+            <button data-p="/left">◀</button>
+            <button data-p="/enter">OK</button>
+            <button data-p="/right">▶</button>
+
+            <div></div>
+            <button data-p="/down">▼</button>
+            <div></div>
+
+        </div>
+
+    </section>
+
+    <section class="card two-buttons">
+
+        <button data-p="/home">🏠 Home</button>
+        <button data-p="/back">← Back</button>
+
+    </section>
+
+    <section class="card">
+
+        <label for="text">Text</label>
+
+        <input id="text" placeholder="Enter text">
+
+        <button id="sendText">Send Text</button>
+
+    </section>
+
+    <section class="card">
+
+        <label>Tap Screen</label>
+
+        <div class="row">
+
+            <input id="x" placeholder="X">
+
+            <input id="y" placeholder="Y">
+
+        </div>
+
+        <button id="tap">Tap</button>
+
+    </section>
+
+    <details class="card">
+
+        <summary>Advanced</summary>
+
+        <br>
+
+        <label>Swipe</label>
+
+        <div class="row">
+            <input id="x1" placeholder="X1">
+            <input id="y1" placeholder="Y1">
+        </div>
+
+        <div class="row">
+            <input id="x2" placeholder="X2">
+            <input id="y2" placeholder="Y2">
+        </div>
+
+        <input id="dur" value="300" placeholder="Duration">
+
+        <button id="swipe">Swipe</button>
+
+        <hr>
+
+        <label>Custom Keycode</label>
+
+        <input id="key" placeholder="Keycode">
+
+        <button id="sendKey">Send Keycode</button>
+
+    </details>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
